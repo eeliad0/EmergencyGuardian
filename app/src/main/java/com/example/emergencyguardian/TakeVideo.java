@@ -1,6 +1,6 @@
 package com.example.emergencyguardian;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class TakeVideo extends AppCompatActivity {
 }

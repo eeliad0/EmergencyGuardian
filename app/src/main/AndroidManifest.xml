@@ -49,8 +49,14 @@
         <activity
             android:name=".SplashScreen"
             android:configChanges="orientation|screenSize"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    <activity
             android:name=".EmergencyText"
             android:configChanges="orientation|screenSize"
             android:label="Emergency Text" />
@@ -74,12 +80,8 @@
             android:name=".SirenPlay"
             android:configChanges="orientation|screenSize"
             android:label="Siren Play" />
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
     </application>
 
 </manifest>

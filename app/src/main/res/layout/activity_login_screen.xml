@@ -41,7 +41,7 @@
                 android:textColor="#A7A4A4"
                 />
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/email_til"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,9 +58,9 @@
                     android:text="youremail@gmail.com"
                     android:inputType="textEmailAddress"
                     android:textSize="16sp" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/password_til"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -79,7 +79,7 @@
                     android:maxLines="1"
                     android:text="shashank"
                     android:textSize="16sp" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/forgot_password"
