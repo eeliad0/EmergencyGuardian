@@ -1,4 +1,6 @@
 package com.example.emergencyguardian;
 
-public class SirenPlay {
+import android.support.v7.app.AppCompatActivity;
+
+public class SirenPlay extends AppCompatActivity {
 }

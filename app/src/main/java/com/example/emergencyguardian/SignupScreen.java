@@ -1,4 +1,6 @@
 package com.example.emergencyguardian;
 
-public class SignupScreen {
+import android.support.v7.app.AppCompatActivity;
+
+public class SignupScreen extends AppCompatActivity {
 }

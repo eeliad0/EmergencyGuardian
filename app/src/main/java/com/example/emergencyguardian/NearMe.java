@@ -1,4 +1,6 @@
 package com.example.emergencyguardian;
 
-public class NearMe {
+import android.support.v7.app.AppCompatActivity;
+
+public class NearMe extends AppCompatActivity {
 }

@@ -1,4 +1,6 @@
 package com.example.emergencyguardian;
 
-public class EmergencyCall {
+import android.support.v7.app.AppCompatActivity;
+
+public class EmergencyCall extends AppCompatActivity {
 }

@@ -1,4 +1,6 @@
 package com.example.emergencyguardian;
 
-public class SendVideo {
+import android.support.v7.app.AppCompatActivity;
+
+public class SendVideo extends AppCompatActivity {
 }

@@ -1,4 +1,6 @@
 package com.example.emergencyguardian;
 
-public class EmergencyButton {
+import android.support.v7.app.AppCompatActivity;
+
+public class EmergencyButton extends AppCompatActivity {
 }

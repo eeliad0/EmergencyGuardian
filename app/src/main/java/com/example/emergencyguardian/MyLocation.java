@@ -1,4 +1,6 @@
 package com.example.emergencyguardian;
 
-public class MyLocation {
+import android.support.v7.app.AppCompatActivity;
+
+public class MyLocation extends AppCompatActivity {
 }
