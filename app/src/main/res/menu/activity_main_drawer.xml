@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This XML file defines a menu used for navigation in an Android app. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!-- Define a group for the menu items with single-check behavior. -->
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_notifications"
+            android:icon="@drawable/ic_menu_notification"
+            android:title="@string/menu_notifications" />
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:icon="@drawable/ic_menu_about"
+            android:title="@string/menu_about" />
+        <item
+            android:id="@+id/nav_personal_details"
+            android:icon="@drawable/ic_menu_personal_details"
+            android:title="@string/menu_personal_details" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_settings"
+            android:title="@string/menu_settings" />
+
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_menu_log_out"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>

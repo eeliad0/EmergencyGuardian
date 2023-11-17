@@ -23,7 +23,7 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.sign_in) {
-            Intent intent = new Intent(getApplicationContext(), Home.class);
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
             startActivity(intent);
         } else if (view.getId() == R.id.sign_up) {
             Intent intent = new Intent(getApplicationContext(), SignupScreen.class);

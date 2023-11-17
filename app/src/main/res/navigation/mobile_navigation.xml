@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Navigation XML Resource -->
+<!-- This XML defines the navigation graph for navigating between fragments in the app. -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home"><!-- The starting destination when the navigation begins -->
+
+    <!-- HOME NAV -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.emergencyguardian.Home"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+    <action
+        android:id="@+id/action_HomeFragment_to_EmergencyCallFragment"
+        app:destination="@id/EmergencyCall" />
+    <action
+        android:id="@+id/action_HomeFragment_toEmergencyTextFragment"
+        app:destination="@id/EmergencyText" />
+    <action
+        android:id="@+id/action_HomeFragment_to_MyLocationFragment"
+        app:destination="@id/MyLocation" />
+    <action
+        android:id="@+id/action_HomeFragment_to_NearMeFragment"
+        app:destination="@id/NearMe" />
+    <action
+        android:id="@+id/action_HomeFragment_to_SelfDefenceFragment"
+        app:destination="@id/SelfDefence" />
+    <action
+        android:id="@+id/action_HomeFragment_to_TakeVideoFragment"
+        app:destination="@id/TakeVideo" />
+    <action
+        android:id="@+id/action_HomeFragment_to_SirenPlayFragment"
+        app:destination="@id/SirenPlay" />
+    <action
+        android:id="@+id/action_HomeFragment_to_EmergencyButtonFragment"
+        app:destination="@id/EmergencyButton" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/EmergencyButton"
+        android:name="com.example.emergencyguardian.EmergencyButton"
+        android:label="@string/label_emergency_button"
+        tools:layout="@layout/fragment_emergency_button">
+    </fragment>
+
+    <fragment
+        android:id="@+id/EmergencyCall"
+        android:name="com.example.emergencyguardian.EmergencyCall"
+        android:label="@string/label_emergency_call"
+        tools:layout="@layout/fragment_emergency_call">
+    </fragment>
+
+    <fragment
+        android:id="@+id/EmergencyText"
+        android:name="com.example.emergencyguardian.EmergencyText"
+        android:label="@string/label_emergency_text"
+        tools:layout="@layout/fragment_emergency_text" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/TakeVideo"
+        android:name="com.example.emergencyguardian.TakeVideo"
+        android:label="@string/label_take_video"
+        tools:layout="@layout/fragment_take_video">
+
+        <action
+            android:id="@+id/action_TakeVideoFragment_to_SendVideoFragment"
+            app:destination="@id/SendVideo" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/MyLocation"
+        android:name="com.example.emergencyguardian.MyLocation"
+        android:label="@string/label_my_location"
+        tools:layout="@layout/fragment_my_location">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/SendVideo"
+        android:name="com.example.emergencyguardian.SendVideo"
+        android:label="@string/label_send_video"
+        tools:layout="@layout/fragment_send_video">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/SelfDefence"
+        android:name="com.example.emergencyguardian.SelfDefense"
+        android:label="@string/label_self_defence"
+        tools:layout="@layout/fragment_self_defence" />
+
+    <fragment
+        android:id="@+id/NearMe"
+        android:name="com.example.emergencyguardian.NearMe"
+        android:label="@string/label_near_me"
+        tools:layout="@layout/fragment_near_me">
+    </fragment>
+    <fragment
+        android:id="@+id/SirenPlay"
+        android:name="com.example.emergencyguardian.SirenPlay"
+        android:label="@string/label_siren_play"
+        tools:layout="@layout/fragment_siren_play">
+
+    </fragment>
+
+</navigation>

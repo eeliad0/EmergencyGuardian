@@ -1,4 +1,4 @@
 package com.example.emergencyguardian;
-
-public class SendNotification {
+import androidx.fragment.app.Fragment;
+public class SendNotification extends Fragment {
 }

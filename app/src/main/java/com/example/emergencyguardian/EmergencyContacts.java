@@ -1,6 +1,6 @@
 package com.example.emergencyguardian;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 
-public class EmergencyContacts extends AppCompatActivity {
+public class EmergencyContacts extends Fragment {
 }

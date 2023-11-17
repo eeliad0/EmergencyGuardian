@@ -15,8 +15,8 @@ android {
      * or SDK, and simply using the newest version does not guarantee compatibility.
      */
     defaultConfig {
-        applicationId = "com.example.epl498_labs" // Package name of the application
-        minSdk = 24 // Minimum supported Android version (API level)
+        applicationId = "com.example.emergencyguardian" // Package name of the application
+        minSdk = 26 // Minimum supported Android version (API level)
         targetSdk = 33 // Target Android version
         versionCode = 1 // Version code for the app
         versionName = "1.0" // Version name for the app

@@ -33,35 +33,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Settings"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label=""
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".EmergencyContacts"
+            android:name=".MainActivity"
             android:configChanges="orientation|screenSize"
-            android:label="Emergency Contacts" />
-        <activity
-            android:name=".EmergencyCall"
-            android:configChanges="orientation|screenSize"
-            android:label="Emergency Call" />
-        <activity
-            android:name=".EmergencyButton"
-            android:configChanges="orientation|screenSize"
-            android:label="Emergency Button" />
-        <activity
-            android:name=".AddEmergencyContacts"
-            android:configChanges="orientation|screenSize"
-            android:label="Add Emergency Contacts" />
-        <activity
-            android:name=".MyProfile"
-            android:configChanges="orientation|screenSize"
-            android:label="My Profile" />
-        <activity
-            android:name=".Home"
-            android:label="@string/title_activity_home"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/MyAppTheme" />
         <activity
             android:name=".SignupScreen"
             android:configChanges="orientation|screenSize"
@@ -80,35 +55,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    <activity
-            android:name=".EmergencyText"
-            android:configChanges="orientation|screenSize"
-            android:label="Emergency Text" />
-        <activity
-            android:name=".MyLocation"
-            android:configChanges="orientation|screenSize"
-            android:label="My Location" />
-        <activity
-            android:name=".NearMe"
-            android:configChanges="orientation|screenSize"
-            android:label="Near Me" />
-        <activity
-            android:name=".SendVideo"
-            android:configChanges="orientation|screenSize"
-            android:label="Send Video" />
-        <activity
-            android:name=".TakeVideo"
-            android:configChanges="orientation|screenSize"
-            android:label="Take Video" />
-        <activity
-            android:name=".SirenPlay"
-            android:configChanges="orientation|screenSize"
-            android:label="Siren Play" />
-        <service
-            android:name=".MyLocation"
-            android:foregroundServiceType="location">
-            <!-- Any inner elements would go here. -->
-        </service>
+
+
        <!-- <receiver android:name=".ui.location.GeofenceBroadcastReceiver"/> -->
         <!-- In order to use google maps -->
         <!-- Replace it with your key -->
