@@ -85,6 +85,7 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics:21.3.0")
     implementation("com.google.firebase:firebase-messaging:23.2.1")
     implementation("com.google.firebase:firebase-storage:20.2.1")
+    implementation("androidx.cardview:cardview:1.0.0")
 
     // JUnit for unit testing
     testImplementation("junit:junit:4.13.2")

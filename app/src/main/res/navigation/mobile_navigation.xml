@@ -17,7 +17,7 @@
         android:id="@+id/action_HomeFragment_to_EmergencyCallFragment"
         app:destination="@id/EmergencyCall" />
     <action
-        android:id="@+id/action_HomeFragment_toEmergencyTextFragment"
+        android:id="@+id/action_HomeFragment_to_EmergencyTextFragment"
         app:destination="@id/EmergencyText" />
     <action
         android:id="@+id/action_HomeFragment_to_MyLocationFragment"
