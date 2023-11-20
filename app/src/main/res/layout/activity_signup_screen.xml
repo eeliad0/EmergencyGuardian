@@ -39,22 +39,18 @@
                 />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/fullname_til"
+                android:id="@+id/fullname_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:textColorHint="#FFB3B3B3">
+                android:drawableStart="@drawable/ic_person_gray_24dp"
+                android:drawablePadding="16dp">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/ic_person_gray_24dp"
-                    android:drawablePadding="16dp"
-                    android:hint="Fullname"
-                    android:text="Admin"
-                    android:inputType="text"
-                    android:textSize="16sp" />
+                    android:hint="Full Name" />
+
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -64,7 +60,7 @@
                 android:layout_marginTop="16dp"
                 android:textColorHint="#FFB3B3B3">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -84,7 +80,7 @@
                 android:textColorHint="#FFB3B3B3"
                 app:passwordToggleEnabled="true">
 
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/password"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
