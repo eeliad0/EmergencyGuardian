@@ -1,6 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+   <androidx.camera.view.PreviewView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/preview"
+       />
+
+    <ImageView
+        android:layout_width="60sp"
+        android:layout_height="60sp"
+        android:src="@drawable/take_video"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40sp"
+        android:scaleType="centerCrop"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:id="@+id/capture"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ImageButton
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:src="@drawable/baseline_flash_on_24"
+        android:layout_alignParentEnd="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:layout_margin="10sp"
+        android:id="@+id/toggleFlash"
+        tools:ignore="MissingConstraints" />
+    <ImageButton
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:src="@drawable/baseline_flip_camera_android_24"
+        android:layout_below="@id/toggleFlash"
+        android:layout_marginEnd="10sp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:id="@+id/flipCamera"
+        tools:ignore="MissingConstraints" />
+
+
+
+
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
