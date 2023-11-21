@@ -1,10 +1,13 @@
 package com.example.emergencyguardian;
 import android.Manifest;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,10 +32,12 @@ import androidx.camera.video.VideoRecordEvent;
 import androidx.camera.view.PreviewView;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 
 import com.google.common.util.concurrent.ListenableFuture;
 
+import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.concurrent.ExecutionException;
@@ -121,6 +126,23 @@ public class TakeVideo extends Fragment {
                 if (!((VideoRecordEvent.Finalize) videoRecordEvent).hasError()) {
                     String msg = "Video capture succeeded: " + ((VideoRecordEvent.Finalize) videoRecordEvent).getOutputResults().getOutputUri();
                     Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show();
+
+
+                    //String videoPath = requireContext().getExternalFilesDir(null).getAbsolutePath() + "/Movies/CameraX-Video/" + name + ".mp4";
+                    String videoPath = "/storage/emulated/0/Movies/CameraX-Video/" + name + ".mp4";
+                    Log.d("PERIERGOONOMA",videoPath);
+
+                    File videoFile = new File(videoPath);
+                    Uri videoUri = FileProvider.getUriForFile(requireContext(), requireContext().getPackageName() + ".provider", videoFile);
+
+                    Intent share = new Intent(Intent.ACTION_SEND);
+                    share.setType("video/*");
+                    share.putExtra(Intent.EXTRA_STREAM, videoUri);
+                    share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+
+                    startActivity(Intent.createChooser(share, "Share video File"));
+
+
                 } else {
                     recording.close();
                     recording = null;

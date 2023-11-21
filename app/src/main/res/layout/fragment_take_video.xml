@@ -11,7 +11,7 @@
        android:id="@+id/preview"
        />
 
-    <ImageView
+    <ImageButton
         android:layout_width="60sp"
         android:layout_height="60sp"
         android:src="@drawable/take_video"

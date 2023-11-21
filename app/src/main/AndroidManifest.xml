@@ -17,6 +17,14 @@
     <!-- Include only if your app benefits from precise location access. -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
     <!--  Use the following permission when wanting to user background location or geofence -->
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <!-- this permission is to have access to the internet -->
@@ -28,9 +36,9 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/emergency_button"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/emergency_button"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
@@ -63,6 +71,22 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAp2S1Qif7QgsYzfNxOfivrH-7IBTfzaX8" />
+
+<!--         youtube player API-->
+        <meta-data
+            android:name="com.google.services.youtube_api_key"
+            android:value="AIzaSyAweV1Dsn4WnG82MFyfhKMH6EcAkNotl3o" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
 
         <!-- Declare Firebase Cloud Messaging Service -->
         <service
