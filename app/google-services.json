@@ -1,0 +1,29 @@
+{
+    "project_info": {
+      "project_number": "568640265295",
+      "project_id": "epl498-7e29c",
+      "storage_bucket": "epl498-7e29c.appspot.com"
+    },
+    "client": [
+      {
+        "client_info": {
+          "mobilesdk_app_id": "1:568640265295:android:3995a584ce9b57d0791e3a",
+          "android_client_info": {
+            "package_name": "com.example.emergencyguardian"
+          }
+        },
+        "oauth_client": [],
+        "api_key": [
+          {
+            "current_key": "AIzaSyCctLJNifsIIbalxotSbkWTT_tusIq9TkE"
+          }
+        ],
+        "services": {
+          "appinvite_service": {
+            "other_platform_oauth_client": []
+          }
+        }
+      }
+    ],
+    "configuration_version": "1"
+  }
