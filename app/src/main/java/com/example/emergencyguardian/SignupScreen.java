@@ -14,6 +14,9 @@ import com.google.firebase.firestore.DocumentReference;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -58,7 +61,15 @@ public class SignupScreen extends AppCompatActivity implements View.OnClickListe
             userData.put("name", name);
             userData.put("email", userEmail);
             userData.put("password", userPassword);
-            userData.put("birthday","01-01-2000" );
+
+            DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+
+
+            try {
+                userData.put("birthday",dateFormat.parse("01-01-1990"));
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
+            }
 
             // Use Firestore's add() method to store the data in the database
             docRef.set(userData).addOnSuccessListener(new OnSuccessListener<Void>() {
