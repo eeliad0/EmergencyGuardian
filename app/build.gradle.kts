@@ -37,6 +37,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8 // Source code compatibility (Java 8)
         targetCompatibility = JavaVersion.VERSION_1_8 // Target compatibility (Java 8)
     }
+    packagingOptions {
+        exclude("META-INF/DEPENDENCIES")
+    }
     buildFeatures {
         viewBinding = true
         dataBinding = true
@@ -69,10 +72,15 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.0")
 
     // Camera components
-    implementation("androidx.camera:camera-camera2:1.3.0-alpha04")
-    implementation("androidx.camera:camera-lifecycle:1.3.0-alpha04")
+    implementation("androidx.camera:camera-camera2:1.3.0-alpha06")
+    implementation("androidx.camera:camera-lifecycle:1.3.0-alpha06")
     implementation("androidx.camera:camera-view:1.3.0-alpha04")
     implementation("androidx.camera:camera-extensions:1.3.0-alpha04")
+    implementation("androidx.camera:camera-view:1.3.0-alpha06")
+    implementation("androidx.camera:camera-core:1.3.0-alpha06")
+    implementation("androidx.camera:camera-video:1.3.0-alpha06")
+    implementation("androidx.camera:camera-mlkit-vision:1.3.0-alpha06")
+    implementation("androidx.camera:camera-extensions:1.3.0-alpha06")
     implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.0"))
 
     // Call API Package
@@ -91,6 +99,7 @@ dependencies {
     implementation ("com.google.firebase:firebase-database:20.0.3")
     implementation ("com.google.firebase:firebase-auth:21.0.1")
     implementation("androidx.cardview:cardview:1.0.0")
+    implementation("com.android.volley:volley:1.2.1")
 
     implementation("com.google.apis:google-api-services-youtube:v3-rev222-1.25.0")
     implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")
@@ -101,4 +110,17 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     // Espresso for UI testing
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    //for youtube api
+    implementation("com.google.api-client:google-api-client:1.31.5")
+    implementation("com.google.apis:google-api-services-youtube:v3-rev222-1.25.0")
+    implementation("com.google.oauth-client:google-oauth-client-jetty:1.25.0")
+    implementation("com.google.apis:google-api-services-youtube:v3-rev222-1.25.0")
+    implementation("com.google.http-client:google-http-client-jackson2:1.39.2")
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:11.0.1")
+
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+
+
 }
