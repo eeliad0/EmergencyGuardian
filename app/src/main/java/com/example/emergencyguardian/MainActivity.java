@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         mAppBarConfiguration = new AppBarConfiguration.Builder(
                 R.id.nav_home, R.id.nav_notifications, R.id.nav_personal_details, R.id.nav_about_us, R.id.nav_settings,
                 R.id.EmergencyButton, R.id.EmergencyCall, R.id.EmergencyText, R.id.TakeVideo, R.id.MyLocation,
-                R.id.SendVideo, R.id.SelfDefence, R.id.NearMe, R.id.SirenPlay)
+                R.id.SendVideo, R.id.SelfDefence, R.id.SirenPlay)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
