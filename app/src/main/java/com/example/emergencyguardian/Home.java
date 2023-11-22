@@ -1,6 +1,9 @@
 package com.example.emergencyguardian;
 
+import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +33,7 @@ public class Home extends Fragment {
     private NavController navController;
 
 
-    private ActivityResultLauncher<String> requestPermissionLauncher =
+    private ActivityResultLauncher<String> requestPermissionLauncherLoc =
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
                 if (isGranted) {
                     // Permission granted, navigate to MyLocationFragment
@@ -38,6 +41,17 @@ public class Home extends Fragment {
                 } else {
                     // Permission denied, show a toast or handle it accordingly
                     Toast.makeText(requireContext(), "Location Permissions Required for this function", Toast.LENGTH_SHORT).show();
+                }
+            });
+
+
+    private ActivityResultLauncher<String> requestPermissionLauncherPhone =
+            registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
+                if (isGranted) {
+                    dialPhoneNumber();
+                } else {
+                    // Permission denied, show a toast or handle it accordingly
+                    Toast.makeText(requireContext(), "Phone Permissions Required for this function", Toast.LENGTH_SHORT).show();
                 }
             });
 
@@ -66,14 +80,26 @@ public class Home extends Fragment {
         navController = Navigation.findNavController(view);
 
         cardEmergencyButton.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_EmergencyButtonFragment));
-        cardEmergencyCall.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_EmergencyCallFragment));
+        cardEmergencyCall.setOnClickListener(v ->{
+
+            if (ContextCompat.checkSelfPermission(requireContext(), Manifest.permission.CALL_PHONE)
+                    != PackageManager.PERMISSION_GRANTED) {
+                // Permission is not granted. Request it using ActivityResultLauncher.
+                requestPermissionLauncherPhone.launch(android.Manifest.permission.CALL_PHONE);
+            } else {
+                // Permission already granted, navigate directly
+                dialPhoneNumber();
+            }
+
+
+        });
         cardEmergencyText.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_EmergencyTextFragment));
         cardNearMe.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_EmergencyContactFragment));
         cardMyLocation.setOnClickListener(v -> {
             if (ContextCompat.checkSelfPermission(requireContext(), android.Manifest.permission.ACCESS_FINE_LOCATION)
                     != PackageManager.PERMISSION_GRANTED) {
                 // Permission is not granted. Request it using ActivityResultLauncher.
-                requestPermissionLauncher.launch(android.Manifest.permission.ACCESS_FINE_LOCATION);
+                requestPermissionLauncherLoc.launch(android.Manifest.permission.ACCESS_FINE_LOCATION);
             } else {
                 // Permission already granted, navigate directly
                 navController.navigate(R.id.action_HomeFragment_to_MyLocationFragment);
@@ -82,5 +108,21 @@ public class Home extends Fragment {
         cardSirenPlay.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_SirenPlayFragment));
         cardTakeVideo.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_TakeVideoFragment));
         cardSelfDefence.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_SelfDefenceFragment));
+    }
+
+
+    private void dialPhoneNumber() {
+        // Create an Intent with ACTION_DIAL and the phone number
+        Intent dialIntent = new Intent(Intent.ACTION_CALL);
+        dialIntent.setData(Uri.parse("tel:" + "112"));
+
+        // Check if there's an activity that can handle the intent
+        if (dialIntent.resolveActivity(requireContext().getPackageManager()) != null) {
+            // Start the dialer activity
+            startActivity(dialIntent);
+        } else {
+            // Handle the case where there's no activity to handle the intent
+            Toast.makeText(requireContext(), "No phone application found", Toast.LENGTH_SHORT).show();
+        }
     }
 }
