@@ -6,12 +6,14 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -101,6 +103,13 @@ public class MyProfile extends Fragment {
             }
         });
 
+        RelativeLayout editEmergencyContacts = binding.emergencyContacts;
+        editEmergencyContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_MyProfileFragment_to_EmergencyContactsFragment);
+            }
+        });
         return binding.getRoot();
     }
 

@@ -93,12 +93,7 @@
         android:label="@string/label_self_defence"
         tools:layout="@layout/fragment_self_defence" />
 
-    <fragment
-        android:id="@+id/NearMe"
-        android:name="com.example.emergencyguardian.NearMe"
-        android:label="@string/label_near_me"
-        tools:layout="@layout/fragment_near_me">
-    </fragment>
+
     <fragment
         android:id="@+id/SirenPlay"
         android:name="com.example.emergencyguardian.SirenPlay"
