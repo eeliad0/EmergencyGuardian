@@ -58,6 +58,7 @@ public class SignupScreen extends AppCompatActivity implements View.OnClickListe
             userData.put("name", name);
             userData.put("email", userEmail);
             userData.put("password", userPassword);
+            userData.put("birthday","01-01-2000" );
 
             // Use Firestore's add() method to store the data in the database
             docRef.set(userData).addOnSuccessListener(new OnSuccessListener<Void>() {
