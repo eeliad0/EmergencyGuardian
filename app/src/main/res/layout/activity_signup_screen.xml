@@ -39,18 +39,22 @@
                 />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/fullname_layout"
+                android:id="@+id/fullname_til"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_person_gray_24dp"
-                android:drawablePadding="16dp">
+                android:layout_marginTop="16dp"
+                android:textColorHint="#FFB3B3B3">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/fullname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Full Name" />
-
+                    android:drawableStart="@drawable/ic_person_gray_24dp"
+                    android:drawablePadding="16dp"
+                    android:hint="Full Name"
+                    android:text=""
+                    android:inputType="text"
+                    android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -67,7 +71,7 @@
                     android:drawableStart="@drawable/ic_email_gray_24dp"
                     android:drawablePadding="16dp"
                     android:hint="Email"
-                    android:text="admin@gmail.com"
+                    android:text=""
                     android:inputType="textEmailAddress"
                     android:textSize="16sp" />
             </com.google.android.material.textfield.TextInputLayout>
@@ -87,7 +91,7 @@
                     android:drawableStart="@drawable/ic_lock_gray_24dp"
                     android:drawablePadding="16dp"
                     android:hint="Password"
-                    android:text="shashank"
+                    android:text=""
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:textSize="16sp" />
