@@ -63,6 +63,24 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         navController.navigate(R.id.nav_home);
+        FirebaseMessaging.getInstance().getToken()
+                .addOnCompleteListener(new OnCompleteListener<String>() {
+                    @Override
+                    public void onComplete(Task<String> task) {
+                        if (!task.isSuccessful()) {
+                            Log.w(TAG, "Fetching FCM registration token failed", task.getException());
+                            return;
+                        }
+
+                        // Get the FCM registration token
+                        String token = task.getResult();
+
+                        // TODO: do smth when opening the push notification
+                        // for now we just toast the firebase cloud messaging registration code
+                        String msg = "FCM Registration token: " + token;
+                        Log.d(TAG, msg);
+                    }
+                });
 
     }
 

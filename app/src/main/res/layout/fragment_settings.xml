@@ -1,7 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white">
+    android:orientation="vertical"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Settings"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:layout_marginBottom="16dp"/>
+
+
+    <View style="@style/proifleDetailsView" />
+
+    <RelativeLayout
+        android:id="@+id/EditEmergencyContacts"
+        style="@style/profileDetailsLayout">
+        <ImageView
+            android:id="@+id/contactsImageView"
+            android:src="@drawable/ic_contacts"
+            style="@style/profileDetailsImage" />
+
+        <TextView
+            android:text="Edit Emergency Contacts"
+            android:layout_toRightOf="@id/contactsImageView"
+            style="@style/profileDetailsTextMain"/>
+
+
+
+    </RelativeLayout>
+    <View style="@style/proifleDetailsView" />
+    <RelativeLayout
+        android:id="@+id/AccountEdit"
+        style="@style/profileDetailsLayout">
+        <ImageView
+            android:id="@+id/icon_account"
+            android:src="@drawable/ic_menu_personal_details"
+            style="@style/profileDetailsImage" />
+
+        <TextView
+            android:text="Edit Personal Details"
+            android:layout_toRightOf="@id/icon_account"
+            style="@style/profileDetailsTextMain"/>
+
+
+
+    </RelativeLayout>  <View style="@style/proifleDetailsView" />
+    <CheckBox
+        android:id="@+id/notificationCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enable Notifications"
+        android:checked="true"/>
+
+<Button
+android:id="@+id/saveButton"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:text="Save Settings"
+android:layout_marginTop="16dp"/>
+    </LinearLayout>

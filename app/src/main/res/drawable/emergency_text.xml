@@ -1,37 +1,13 @@
 <vector
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:name="vector"
-    android:width="512dp"
-    android:height="512dp"
-    android:viewportWidth="512"
-    android:viewportHeight="512">
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
     <path
-        android:name="path"
-        android:pathData="M 416.944 130.016 L 509.439 219.788 C 491.845 95.555 385.091 0 256 0 C 114.615 0 0 114.615 0 256 C 0 395.851 112.147 509.493 251.414 511.942 L 95.464 359.232 L 416.944 130.016 Z"
-        android:fillColor="#f52424"
+        android:name="path_1"
+        android:pathData="M 20 2 L 4 2 C 2.897 2 2 2.894 2 3.992 L 2 16.008 C 2 17.106 2.897 18 4 18 L 7 18 L 7 22 L 13.351 18 L 20 18 C 21.103 18 22 17.106 22 16.008 L 22 3.992 C 21.998 3.463 21.787 2.956 21.412 2.582 C 21.037 2.209 20.529 1.999 20 2 Z M 13 15 L 11 15 L 11 13 L 13 13 L 13 15 Z M 13 11 L 11 11 L 11 5 L 13 5 L 13 11 Z"
+        android:fillColor="#000"
         android:strokeWidth="1"/>
-    <path
-        android:name="path_2"
-        android:pathData="M 509.439 219.788 L 416.944 130.016 L 95.464 359.232 L 251.414 511.942 C 252.941 511.969 254.467 512 256 512 C 397.385 512 512 397.385 512 256 C 512 243.706 511.114 231.62 509.439 219.788 Z"
-        android:fillColor="#ff5c5c"
-        android:strokeWidth="1"/>
-    <group android:name="group">
-        <path
-            android:name="path_3"
-            android:pathData="M 362.736 347.888 L 362.736 441.272 L 244.448 347.888 Z"
-            android:fillColor="#000"
-            android:strokeWidth="1"/>
-        <path
-            android:name="path_4"
-            android:pathData="M 404.76 363.872 L 107.24 363.872 C 97.688 363.872 89.864 356.056 89.864 346.496 L 89.864 142.368 C 89.864 132.816 97.68 124.992 107.24 124.992 L 404.752 124.992 C 414.304 124.992 422.128 132.808 422.128 142.368 L 422.128 346.504 C 422.128 356.056 414.312 363.872 404.76 363.872 Z"
-            android:fillColor="#000"
-            android:strokeWidth="1"/>
-    </group>
-    <group android:name="group_1">
-        <path
-            android:name="path_5"
-            android:pathData="M 149.26 176.35 L 362.73 176.35 L 362.73 192.35 L 149.26 192.35 Z M 149.26 231.57 L 362.73 231.57 L 362.73 247.57 L 149.26 247.57 Z M 149.26 286.79 L 362.73 286.79 L 362.73 302.79 L 149.26 302.79 Z"
-            android:fillColor="#000"
-            android:strokeWidth="1"/>
-    </group>
 </vector>

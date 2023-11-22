@@ -67,9 +67,8 @@
                         android:orientation="vertical">
 
 
-
                         <ImageView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="164dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/emergency_call" />
@@ -108,7 +107,7 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="164dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/emergency_text" />
@@ -145,7 +144,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="164dp"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/siren_play" />
+                            android:src="@drawable/ic_siren" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -285,9 +284,8 @@
                         android:orientation="vertical">
 
 
-
                         <ImageView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="164dp"
                             android:scaleType="fitCenter"
                             android:src="@drawable/self_defence" />

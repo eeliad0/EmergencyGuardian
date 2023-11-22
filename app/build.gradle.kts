@@ -41,6 +41,9 @@ android {
         viewBinding = true
         dataBinding = true
     }
+    packagingOptions {
+        exclude ("META-INF/DEPENDENCIES");
+    }
 }
 
 dependencies {
@@ -88,6 +91,9 @@ dependencies {
     implementation ("com.google.firebase:firebase-database:20.0.3")
     implementation ("com.google.firebase:firebase-auth:21.0.1")
     implementation("androidx.cardview:cardview:1.0.0")
+
+    implementation("com.google.apis:google-api-services-youtube:v3-rev222-1.25.0")
+    implementation("com.pierfrancescosoffritti.androidyoutubeplayer:core:12.1.0")
 
     // JUnit for unit testing
     testImplementation("junit:junit:4.13.2")
