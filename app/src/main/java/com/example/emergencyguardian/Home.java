@@ -49,7 +49,7 @@ public class Home extends Fragment {
         cardEmergencyButton.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_EmergencyButtonFragment));
         cardEmergencyCall.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_EmergencyCallFragment));
         cardEmergencyText.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_EmergencyTextFragment));
-        cardNearMe.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_EmergencyContactFragment));
+        cardNearMe.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_NearMeFragment));
         cardMyLocation.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_MyLocationFragment));
         cardSirenPlay.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_SirenPlayFragment));
         cardTakeVideo.setOnClickListener(v -> navController.navigate(R.id.action_HomeFragment_to_TakeVideoFragment));

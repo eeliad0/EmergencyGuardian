@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubePlayerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubePlayerView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/youtubePlayerView"
+        />
+    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
+        android:id="@+id/youtubePlayerView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/youtubePlayerView2"
+        />
+
+</RelativeLayout>
