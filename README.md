@@ -2,6 +2,11 @@
 Emergency Guardian – Your Reliable Safety Companion
 
 ---
+## Authors
+ - Elli Eliadi
+ - Antria Argyrou
+ - Yiannis Hadjiyiannis
+---
 
 ## How to Run
 Simply import the project from this repository into Android Studio. Use Gradle to build the application, and it's ready to run.
