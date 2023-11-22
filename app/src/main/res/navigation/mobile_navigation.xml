@@ -23,8 +23,8 @@
         android:id="@+id/action_HomeFragment_to_MyLocationFragment"
         app:destination="@id/MyLocation" />
     <action
-        android:id="@+id/action_HomeFragment_to_NearMeFragment"
-        app:destination="@id/NearMe" />
+        android:id="@+id/action_HomeFragment_to_EmergencyContactFragment"
+        app:destination="@id/nav_emergencyContacts" />
     <action
         android:id="@+id/action_HomeFragment_to_SelfDefenceFragment"
         app:destination="@id/SelfDefence" />
@@ -106,5 +106,75 @@
         tools:layout="@layout/fragment_siren_play">
 
     </fragment>
+    <fragment
+        android:id="@+id/nav_personal_details"
+        android:name="com.example.emergencyguardian.MyProfile"
+        android:label="@string/label_my_profile"
+        tools:layout="@layout/content_profile">
+        <action
+            android:id="@+id/action_MyProfileFragment_to_EditProfileFragment"
+            app:destination="@id/nav_edit_profile" />
+        <action
+            android:id="@+id/action_MyProfileFragment_to_EmergencyContactsFragment"
+            app:destination="@id/nav_emergencyContacts" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.emergencyguardian.Settings"
+        android:label="@string/label_settings"
+        tools:layout="@layout/fragment_settings">
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_notifications"
+        android:name="com.example.emergencyguardian.Notifications"
+        android:label="@string/label_notifications"
+        tools:layout="@layout/fragment_notifications">
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_about_us"
+        android:name="com.example.emergencyguardian.AboutUs"
+        android:label="@string/label_about_us"
+        tools:layout="@layout/fragment_about_us">
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_edit_profile"
+        android:name="com.example.emergencyguardian.EditProfile"
+        android:label="@string/label_edit_profile"
+        tools:layout="@layout/fragment_edit_profile">
+        <action
+            android:id="@+id/action_EditProfileFragment_to_MyProfileFragment"
+            app:destination="@id/nav_personal_details" />
+        <action
+            android:id="@+id/action_EditProfileFragment_to_EmergencyContacts"
+            app:destination="@id/nav_emergencyContacts" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_emergencyContacts"
+        android:name="com.example.emergencyguardian.EmergencyContacts"
+        android:label="@string/label_emergency_contacts"
+        tools:layout="@layout/fragment_emergency_contacts">
+        <action
+            android:id="@+id/action_EmergencyContact_to_AddEmergencyContacts"
+            app:destination="@id/nav_add_emergencyContacts" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_add_emergencyContacts"
+        android:name="com.example.emergencyguardian.AddEmergencyContacts"
+        android:label="@string/label_add_emergency_contacts"
+        tools:layout="@layout/fragment_add_emergency_contacts">
+        <action
+            android:id="@+id/action_AddEmergencyContacts_to_EmergencyContacts"
+            app:destination="@id/nav_emergencyContacts" />
+
+
+    </fragment>
+
 
 </navigation>

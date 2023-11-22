@@ -181,16 +181,16 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="164dp"
                             android:scaleType="fitCenter"
-                            android:src="@drawable/near_me" />
+                            android:src="@drawable/ic_contacts" />
 
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
-                            android:text="@string/label_near_me"
+                            android:text="@string/label_emergency_contacts"
                             android:textAlignment="center"
                             android:textSize="14sp" />
 

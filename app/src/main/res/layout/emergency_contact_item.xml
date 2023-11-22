@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardUseCompatPadding="true"
+    app:contentPadding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+    <RelativeLayout
+        style="@style/profileDetailsLayout"
+        android:layout_height="53dp">
+
+        <ImageView
+            android:id="@+id/nameImageView"
+            style="@style/profileDetailsImage"
+            android:src="@drawable/ic_menu_personal_details" />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            style="@style/profileDetailsTextMain"
+            android:layout_toRightOf="@id/nameImageView"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/contact_name_text"
+            style="@style/profileDetailsMiniText"
+            android:layout_toRightOf="@id/nameImageView"
+            android:text=" " />
+
+    </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+    <RelativeLayout
+        style="@style/profileDetailsLayout"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:id="@+id/mobileImageView"
+            style="@style/profileDetailsImage"
+            android:src="@drawable/ic_mobile" />
+
+        <TextView
+            style="@style/profileDetailsTextMain"
+            android:layout_toRightOf="@id/mobileImageView"
+            android:text="Mobile" />
+
+        <TextView
+            android:id="@+id/contact_phone_text"
+            style="@style/profileDetailsMiniText"
+            android:layout_toRightOf="@id/mobileImageView"
+            android:text=" " />
+
+    </RelativeLayout>
+        <View style="@style/proifleDetailsView" />
+
+    <RelativeLayout
+        style="@style/profileDetailsLayout"
+        android:layout_height="53dp">
+
+        <ImageView
+            android:id="@+id/relationshipIcon"
+            style="@style/profileDetailsImage"
+            android:src="@drawable/ic_relationship" />
+
+        <TextView
+            style="@style/profileDetailsTextMain"
+            android:layout_toRightOf="@id/relationshipIcon"
+            android:text="Relationship" />
+
+        <TextView
+            android:id="@+id/contact_relationship_text"
+            style="@style/profileDetailsMiniText"
+            android:layout_toRightOf="@id/relationshipIcon"
+            android:text=" " />
+
+    </RelativeLayout>
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+
+

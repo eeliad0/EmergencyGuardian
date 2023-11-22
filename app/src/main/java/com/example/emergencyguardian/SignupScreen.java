@@ -52,7 +52,7 @@ public class SignupScreen extends AppCompatActivity implements View.OnClickListe
             String name = fullName.getText().toString();
             String userEmail = email.getText().toString();
             String userPassword = password.getText().toString();
-
+            DocumentReference docRef = db.collection("emergency_guardian").document(userEmail);
             // Create a HashMap to store the user data
             Map<String, Object> userData = new HashMap<>();
             userData.put("name", name);
@@ -60,9 +60,9 @@ public class SignupScreen extends AppCompatActivity implements View.OnClickListe
             userData.put("password", userPassword);
 
             // Use Firestore's add() method to store the data in the database
-            db.collection("emergency_guardian").add(userData).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+            docRef.set(userData).addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
-                public void onSuccess(DocumentReference documentReference) {
+                public void onSuccess(Void aVoid) {
                     // Navigate to the login screen
                     Intent intent = new Intent(SignupScreen.this, LoginScreen.class);
                     startActivity(intent);

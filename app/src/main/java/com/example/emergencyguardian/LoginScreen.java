@@ -1,6 +1,7 @@
 package com.example.emergencyguardian;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -57,9 +58,13 @@ public class LoginScreen extends AppCompatActivity implements View.OnClickListen
                             }
                             if (isAuthenticated) {
                                 // Sign in success
+                                SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref", MODE_PRIVATE);
+                                SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                                myEdit.putString("userEmail", userEmail);
+                                myEdit.apply();
                                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                 startActivity(intent);
-                            } else {
+                            }else {
                                 // If sign in fails, display a message to the user.
                                 Toast.makeText(LoginScreen.this, "Authentication failed.",
                                         Toast.LENGTH_SHORT).show();

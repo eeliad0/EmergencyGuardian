@@ -37,15 +37,32 @@ public class MainActivity extends AppCompatActivity {
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+
+
+        String userEmail = getIntent().getStringExtra("email");
+
+        // Create the MyProfile fragment and pass the email to it
+        MyProfile myProfileFragment = new MyProfile();
+        Bundle args = new Bundle();
+        args.putString("email", userEmail);
+        myProfileFragment.setArguments(args);
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.nav_host_fragment_content_main, myProfileFragment)
+                .hide(myProfileFragment)
+                .commit();
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home)
+                R.id.nav_home, R.id.nav_notifications, R.id.nav_personal_details, R.id.nav_about_us, R.id.nav_settings,
+                R.id.EmergencyButton, R.id.EmergencyCall, R.id.EmergencyText, R.id.TakeVideo, R.id.MyLocation,
+                R.id.SendVideo, R.id.SelfDefence, R.id.NearMe, R.id.SirenPlay)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+        navController.navigate(R.id.nav_home);
 
     }
 
@@ -62,4 +79,5 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
 }
